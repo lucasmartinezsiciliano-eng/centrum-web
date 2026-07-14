@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centrum de la Vivienda — Broker, abogados e inmobiliaria | España</title>
+  <meta name="description" content="Si tienes cuotas atrasadas o ya has recibido papeles del juzgado, hay solución. Broker hipotecario, abogados e inmobiliaria en un solo equipo. Cobertura nacional, sede en Tarragona. Te llamamos en menos de 2 minutos." />
+  <link rel="canonical" href="https://centrumdelavivienda.es/" />
+  <link rel="icon" type="image/png" href="./assets/centrum-mark.png" />
+  <meta property="og:title" content="Centrum de la Vivienda — Tu Vivienda, Nuestra Misión" />
+  <meta property="og:description" content="Si el banco te presiona o ya tienes demanda, hay salida. Consulta gratuita, te llamamos en menos de 2 minutos." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; color: #1a1a1a; background: #ffffff; line-height: 1.65; font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+    :root {
+      --navy:       #1B3458;
+      --navy-dk:    #0F2444;
+      --navy-lt:    #2A4775;
+      --green:      #2E8049;
+      --green-dk:   #226939;
+      --green-lt:   #E7F3EB;
+      --off-white:  #F7F5F0;
+      --paper:      #FBF9F4;
+      --white:      #ffffff;
+      --ink:        #1A1A1A;
+      --ink-mid:    #4a4a4a;
+      --ink-soft:   #8B8B8B;
+      --rule:       #E4E0D8;
+      --rule-dark:  rgba(255,255,255,0.10);
+      --red:        #B83227;
+      --orange:     #C46A1A;
+      --amber:      #B48217;
+    }
+
+    .container    { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+    .container-sm { max-width: 760px;  margin: 0 auto; padding: 0 28px; }
+
+    /* SCROLL ANIMATIONS */
+    .fade-in { opacity: 0; transform: translateY(14px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .fade-in-d1 { transition-delay: 0.08s; }
+    .fade-in-d2 { transition-delay: 0.16s; }
+    .fade-in-d3 { transition-delay: 0.24s; }
+    .fade-in-d4 { transition-delay: 0.32s; }
+
+    /* ── UTILITY BAR ───────────────────────────────────────────── */
+    .util-bar {
+      background: var(--navy-dk); color: rgba(255,255,255,0.62);
+      font-size: 12.5px; letter-spacing: 0.02em; height: 36px;
+    }
+    .util-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .util-left, .util-right { display: flex; align-items: center; gap: 24px; }
+    .util-item { display: flex; align-items: center; gap: 7px; font-weight: 300; }
+    .util-item svg { color: var(--green); opacity: 0.95; flex-shrink: 0; }
+    .util-item a { color: inherit; text-decoration: none; transition: color 0.2s; }
+    .util-item a:hover { color: var(--white); }
+    @media (max-width: 768px) {
+      .util-bar { height: auto; padding: 8px 0; font-size: 11.5px; }
+      .util-inner { flex-direction: column; gap: 4px; }
+      .util-left, .util-right { gap: 16px; }
+      .util-right .util-item:nth-child(1) { display: none; }
+    }
+
+    /* ── NAV ───────────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white); border-bottom: 1px solid var(--rule);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 20px; }
+    .logo {
+      display: flex; align-items: center; text-decoration: none;
+      height: 64px; overflow: hidden; flex-shrink: 0;
+    }
+    .logo-img {
+      height: 110px; width: auto; display: block;
+      flex-shrink: 0; margin-left: -8px;
+    }
+    @media (max-width: 720px) {
+      .nav-inner { height: 56px; }
+      .logo { height: 56px; }
+      .logo-img { height: 96px; margin-left: -6px; }
+    }
+
+    .nav-menu { display: flex; align-items: center; gap: 32px; }
+    .nav-menu a {
+      font-size: 14px; font-weight: 400; color: var(--ink-mid); text-decoration: none;
+      transition: color 0.2s; position: relative; padding: 4px 0;
+    }
+    .nav-menu a:hover { color: var(--navy); }
+    .nav-menu a::after {
+      content: ''; position: absolute; left: 0; right: 100%; bottom: -24px; height: 2px;
+      background: var(--green); transition: right 0.25s ease;
+    }
+    .nav-menu a:hover::after { right: 0; }
+    @media (max-width: 920px) { .nav-menu { display: none; } }
+
+    .nav-cta {
+      background: var(--green); color: var(--white); border: none;
+      font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 13.5px;
+      padding: 11px 22px; border-radius: 2px; cursor: pointer;
+      letter-spacing: 0.02em; transition: background 0.2s, transform 0.15s;
+      white-space: nowrap; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+    }
+    .nav-cta:hover { background: var(--green-dk); transform: translateY(-1px); }
+
+    /* ── HERO (CAPTACIÓN) ──────────────────────────────────────── */
+    .hero {
+      background: var(--navy);
+      padding: 48px 0 64px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(ellipse 60% 70% at 90% 30%, rgba(46,128,73,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 0% 100%, rgba(46,128,73,0.06) 0%, transparent 60%);
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 40px; position: relative; z-index: 1;
+    }
+    @media (min-width: 980px) {
+      .hero-grid {
+        grid-template-columns: 1fr 480px;
+        grid-template-areas: "content quiz";
+        gap: 64px; align-items: center;
+      }
+      .hero-content { grid-area: content; }
+      .quiz-card    { grid-area: quiz; }
+    }
+
+    .hero-content {}
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--green);
+      padding: 6px 14px; border: 1px solid rgba(46,128,73,0.40);
+      border-radius: 2px; margin-bottom: 28px;
+    }
+    .hero-eyebrow::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+      box-shadow: 0 0 12px rgba(46,128,73,0.7);
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+    @keyframes pulseDot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(0.8); } }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.85rem, 4vw, 3rem);
+      font-weight: 700; line-height: 1.18; letter-spacing: -0.015em;
+      color: var(--white); margin-bottom: 24px; max-width: 620px;
+    }
+    .hero h1 em { font-style: italic; color: rgba(255,255,255,0.92); }
+    .hero h1 mark { background: none; color: var(--green); font-style: italic; }
+
+    .hero-sub {
+      font-size: 1.02rem; color: rgba(255,255,255,0.65); line-height: 1.6;
+      max-width: 540px; margin-bottom: 24px; font-weight: 300;
+    }
+
+    .hero-callout {
+      background: rgba(46,128,73,0.10);
+      border-left: 2px solid var(--green);
+      padding: 16px 20px;
+      max-width: 540px;
+    }
+    .hero-callout-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 6px;
+    }
+    .hero-callout p {
+      font-size: 0.90rem; color: rgba(255,255,255,0.78); line-height: 1.6;
+      font-weight: 300;
+    }
+    .hero-callout strong { color: var(--white); font-weight: 500; }
+
+    /* ── QUIZ CARD (HERO) ──────────────────────────────────────── */
+    .quiz-card {
+      background: var(--white);
+      border-radius: 4px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.30), 0 2px 8px rgba(0,0,0,0.15);
+      overflow: hidden;
+      position: relative;
+    }
+    .quiz-card-header {
+      background: var(--green);
+      color: var(--white);
+      padding: 18px 28px 16px;
+    }
+    .quiz-card-header-top {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 10px; gap: 12px;
+    }
+    .quiz-back-btn {
+      background: none; border: none; color: rgba(255,255,255,0.75);
+      font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 400;
+      cursor: pointer; padding: 0; display: flex; align-items: center; gap: 4px;
+      transition: color 0.2s; letter-spacing: 0.04em;
+    }
+    .quiz-back-btn:hover { color: var(--white); }
+    .quiz-back-btn[disabled] { opacity: 0; pointer-events: none; }
+    .quiz-step-label {
+      font-size: 10.5px; color: rgba(255,255,255,0.80); letter-spacing: 0.14em;
+      text-transform: uppercase; font-weight: 500;
+    }
+    .quiz-progress-track { height: 3px; background: rgba(255,255,255,0.20); border-radius: 2px; overflow: hidden; }
+    .quiz-progress-fill { height: 100%; background: var(--white); border-radius: 2px; transition: width 0.45s ease; width: 20%; }
+
+    .quiz-card-body {
+      padding: 26px 28px 28px;
+      transition: opacity 0.22s ease;
+    }
+    .quiz-card-body.transitioning { opacity: 0; }
+
+    .quiz-eyebrow {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 10px;
+    }
+    .quiz-question {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.32rem; font-weight: 600; color: var(--navy);
+      line-height: 1.3; margin-bottom: 22px; letter-spacing: -0.01em;
+    }
+    @media (max-width: 480px) { .quiz-question { font-size: 1.2rem; } }
+
+    .quiz-options { display: flex; flex-direction: column; gap: 9px; }
+    .quiz-option {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--off-white);
+      border: 1.5px solid var(--rule);
+      border-radius: 3px;
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      text-align: left; font-family: 'Outfit', sans-serif;
+      width: 100%;
+    }
+    .quiz-option:hover {
+      border-color: var(--green); background: var(--green-lt);
+      transform: translateX(3px);
+    }
+    .quiz-option .opt-icon {
+      font-size: 19px; flex-shrink: 0; width: 28px; text-align: center;
+    }
+    .quiz-option .opt-text {
+      flex: 1; font-size: 0.92rem; font-weight: 500; color: var(--navy);
+      line-height: 1.4;
+    }
+    .quiz-option .opt-arrow {
+      color: var(--green); flex-shrink: 0; opacity: 0;
+      transform: translateX(-4px); transition: opacity 0.2s, transform 0.2s;
+    }
+    .quiz-option:hover .opt-arrow { opacity: 1; transform: translateX(0); }
+
+    .quiz-foot {
+      margin-top: 20px; padding-top: 16px;
+      border-top: 1px solid var(--rule);
+      display: flex; align-items: center; gap: 8px;
+      font-size: 11.5px; color: var(--ink-soft); font-weight: 300;
+    }
+    .quiz-foot svg { color: var(--green); flex-shrink: 0; }
+    .quiz-foot strong { color: var(--navy); font-weight: 500; }
+
+    /* Contact form within quiz */
+    .quiz-contact { display: flex; flex-direction: column; gap: 14px; }
+    .quiz-field-group { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 480px) { .quiz-field-group { grid-template-columns: 1fr; } }
+    .quiz-field label { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.10em; color: var(--ink-mid); margin-bottom: 6px; }
+    .req { color: var(--red); margin-left: 2px; }
+    .quiz-field input {
+      width: 100%; padding: 12px 14px; border-radius: 3px;
+      border: 1.5px solid var(--rule); font-size: 15px; font-family: 'Outfit', sans-serif;
+      color: var(--navy); background: var(--off-white); outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .quiz-field input:focus { border-color: var(--green); background: var(--white); }
+    .quiz-field input::placeholder { color: var(--ink-soft); font-weight: 300; }
+    .quiz-rgpd { display: flex; gap: 10px; align-items: flex-start; background: var(--off-white); border-radius: 3px; padding: 12px 14px; }
+    .quiz-rgpd input[type=checkbox] { flex-shrink: 0; width: 15px; height: 15px; margin-top: 2px; accent-color: var(--green); }
+    .quiz-rgpd label { font-size: 11.5px; color: var(--ink-mid); line-height: 1.55; font-weight: 300; }
+    .quiz-rgpd a { color: var(--green); text-decoration: none; font-weight: 500; }
+    .quiz-submit {
+      width: 100%; background: var(--green); color: var(--white);
+      font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.97rem;
+      padding: 14px 24px; border-radius: 3px; border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      letter-spacing: 0.02em; margin-top: 4px;
+      box-shadow: 0 4px 12px rgba(46,128,73,0.30);
+    }
+    .quiz-submit:hover { background: var(--green-dk); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(46,128,73,0.40); }
+    .quiz-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .quiz-submit svg { width: 16px; height: 16px; }
+
+    /* Confirmation */
+    .quiz-confirm { text-align: center; padding: 8px 0; }
+    .confirm-icon {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--green-lt); color: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px; font-size: 32px; font-weight: 700;
+    }
+    .quiz-confirm h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+    .quiz-confirm p { font-size: 0.92rem; color: var(--ink-mid); line-height: 1.75; max-width: 380px; margin: 0 auto; font-weight: 300; }
+    .confirm-highlight { color: var(--green); font-weight: 600; }
+    .confirm-rows { margin-top: 22px; display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--rule); text-align: left; }
+    .confirm-row {
+      display: flex; align-items: center; gap: 10px; font-size: 0.86rem;
+      color: var(--ink-mid); padding: 12px 0; border-bottom: 1px solid var(--rule);
+      font-weight: 300;
+    }
+    .confirm-row svg { color: var(--green); flex-shrink: 0; }
+
+    /* ── CREDENTIALS BAR ───────────────────────────────────────── */
+    .creds-bar {
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      padding: 20px 0;
+    }
+    .creds-items {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    }
+    @media (max-width: 800px) { .creds-items { grid-template-columns: 1fr 1fr; gap: 14px 0; } }
+    .cred-item {
+      padding: 4px 24px; border-right: 1px solid var(--rule);
+    }
+    .cred-item:first-child { padding-left: 0; }
+    .cred-item:last-child { border-right: none; }
+    @media (max-width: 800px) {
+      .cred-item:nth-child(even) { border-right: none; }
+      .cred-item:first-child { padding-left: 12px; }
+      .cred-item { padding: 4px 12px; }
+    }
+    .cred-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .cred-text strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700; color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+    .cred-text span {
+      font-size: 11px; color: var(--green); margin-top: 4px;
+      letter-spacing: 0.10em; text-transform: uppercase; font-weight: 600;
+    }
+
+    /* ── SECTIONS ──────────────────────────────────────────────── */
+    section { padding: 80px 0; }
+    @media (max-width: 768px) { section { padding: 56px 0; } }
+
+    .section-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::before {
+      content: ''; width: 24px; height: 1px; background: var(--green);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+      font-weight: 700; line-height: 1.18; color: var(--navy);
+      letter-spacing: -0.015em; margin-bottom: 20px;
+    }
+    .lead { font-size: 1.02rem; color: var(--ink-mid); max-width: 580px; font-weight: 300; line-height: 1.7; }
+
+    /* ── PROBLEMA ──────────────────────────────────────────────── */
+    .problema { background: var(--white); }
+    .prob-layout {
+      display: grid; grid-template-columns: 1fr;
+      gap: 56px; margin-top: 56px;
+    }
+    @media (min-width: 880px) {
+      .prob-layout { grid-template-columns: 320px 1fr; gap: 80px; }
+    }
+    .prob-intro .lead { max-width: 280px; }
+
+    .prob-callout {
+      margin-top: 28px; padding: 18px 20px;
+      background: var(--green-lt); border-left: 2px solid var(--green);
+    }
+    .prob-callout-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 6px;
+    }
+    .prob-callout p {
+      font-size: 0.88rem; color: var(--navy); line-height: 1.6; font-weight: 400;
+    }
+    .prob-callout strong { font-weight: 600; }
+
+    .prob-list { display: flex; flex-direction: column; }
+    .prob-item {
+      display: flex; align-items: flex-start; gap: 20px;
+      padding: 24px 0; border-bottom: 1px solid var(--rule);
+      transition: background 0.2s, padding-left 0.2s;
+    }
+    .prob-item:first-child { border-top: 1px solid var(--rule); }
+    .prob-item:hover { background: var(--paper); padding-left: 12px; }
+    .prob-urgency-bar {
+      width: 3px; flex-shrink: 0; border-radius: 2px; align-self: stretch;
+      min-height: 56px;
+    }
+    .prob-item--critical .prob-urgency-bar { background: var(--red); }
+    .prob-item--high     .prob-urgency-bar { background: var(--orange); }
+    .prob-item--medium   .prob-urgency-bar { background: var(--amber); }
+    .prob-status {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.16em;
+      text-transform: uppercase; margin-bottom: 5px;
+    }
+    .prob-item--critical .prob-status { color: var(--red); }
+    .prob-item--high     .prob-status { color: var(--orange); }
+    .prob-item--medium   .prob-status { color: var(--amber); }
+    .prob-content h3 { font-size: 1.02rem; font-weight: 600; color: var(--navy); margin-bottom: 5px; }
+    .prob-content p  { font-size: 0.90rem; color: var(--ink-mid); line-height: 1.65; font-weight: 300; }
+
+    /* ── POR QUÉ CENTRUM ───────────────────────────────────────── */
+    .por-que { background: var(--paper); }
+    .pq-header { max-width: 600px; margin-bottom: 56px; }
+    .pq-grid {
+      display: grid; grid-template-columns: 1fr; gap: 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    @media (min-width: 720px)  { .pq-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { .pq-grid { grid-template-columns: repeat(4, 1fr); } }
+    .pq-item {
+      padding: 36px 32px; border-bottom: 1px solid var(--rule);
+      transition: background 0.25s;
+    }
+    .pq-item:hover { background: var(--white); }
+    @media (min-width: 720px)  { .pq-item:nth-child(odd) { border-right: 1px solid var(--rule); } }
+    @media (min-width: 1000px) {
+      .pq-item { border-right: 1px solid var(--rule); border-bottom: none; }
+      .pq-item:last-child { border-right: none; }
+    }
+    .pq-number {
+      font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700;
+      color: var(--green); line-height: 1; margin-bottom: 18px;
+    }
+    .pq-item h3 { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; line-height: 1.35; }
+    .pq-item p  { font-size: 0.88rem; color: var(--ink-mid); line-height: 1.65; font-weight: 300; }
+
+    /* ── STEPS ─────────────────────────────────────────────────── */
+    .steps { background: var(--white); }
+    .steps-list { margin-top: 56px; }
+    .step-row {
+      display: grid; grid-template-columns: 70px 1fr auto;
+      gap: 0 28px; align-items: start;
+      padding: 36px 0; border-bottom: 1px solid var(--rule);
+      transition: background 0.2s;
+    }
+    .step-row:first-child { border-top: 1px solid var(--rule); }
+    .step-row:hover { background: var(--paper); }
+    @media (max-width: 700px) {
+      .step-row { grid-template-columns: 56px 1fr; }
+      .step-badge { display: none; }
+    }
+    .step-num-large {
+      font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700;
+      color: var(--green); line-height: 1; letter-spacing: -0.03em;
+      padding-top: 2px;
+    }
+    .step-body h3 { font-size: 1.15rem; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+    .step-body p  { font-size: 0.93rem; color: var(--ink-mid); line-height: 1.7; font-weight: 300; max-width: 520px; }
+    .step-body .step-note {
+      margin-top: 12px; font-size: 0.82rem; color: var(--ink-soft);
+      font-weight: 300; display: flex; align-items: center; gap: 7px;
+    }
+    .step-body .step-note svg { color: var(--green); flex-shrink: 0; }
+    .step-badge {
+      font-size: 11px; font-weight: 500; color: var(--green);
+      background: var(--green-lt); border-radius: 2px;
+      padding: 6px 14px; white-space: nowrap; margin-top: 6px; align-self: flex-start;
+      letter-spacing: 0.04em; display: inline-flex; align-items: center; gap: 6px;
+    }
+    .step-badge::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+
+    /* ── SOLUCIONES ─────────────────────────────────────────────── */
+    .soluciones { background: var(--navy); }
+    .soluciones .section-label { color: rgba(46,128,73,0.95); }
+    .soluciones .section-label::before { background: rgba(46,128,73,0.95); }
+    .soluciones h2 { color: var(--white); }
+    .soluciones .lead { color: rgba(255,255,255,0.55); }
+
+    .sol-header { max-width: 600px; margin-bottom: 56px; }
+    .sol-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+    @media (min-width: 720px) { .sol-grid { grid-template-columns: 1fr 1fr; } }
+
+    .sol-item {
+      padding: 28px 0; border-bottom: 1px solid var(--rule-dark);
+      display: flex; gap: 22px; align-items: flex-start;
+    }
+    @media (min-width: 720px) {
+      .sol-item:nth-child(odd)  { padding-right: 44px; border-right: 1px solid var(--rule-dark); }
+      .sol-item:nth-child(even) { padding-left: 44px; }
+      .sol-item:first-child, .sol-item:nth-child(2) { border-top: 1px solid var(--rule-dark); }
+    }
+    .sol-num {
+      font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+      color: rgba(46,128,73,0.95); line-height: 1; flex-shrink: 0; width: 38px; padding-top: 4px;
+    }
+    .sol-content h3 { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 7px; }
+    .sol-content p  { font-size: 0.87rem; color: rgba(255,255,255,0.55); line-height: 1.7; font-weight: 300; }
+
+    /* ── EQUIPO INTEGRADO ──────────────────────────────────────── */
+    .equipo { background: var(--paper); }
+    .equipo-intro { max-width: 720px; margin-bottom: 56px; }
+    .equipo-intro .lead { max-width: 620px; margin-top: 6px; }
+
+    .equipo-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    @media (min-width: 760px)  { .equipo-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .equipo-card {
+      padding: 40px 36px;
+      border-bottom: 1px solid var(--rule);
+      background: var(--white);
+      position: relative;
+      transition: background 0.25s;
+      display: flex; flex-direction: column;
+    }
+    .equipo-card:last-child { border-bottom: none; }
+    .equipo-card:hover { background: var(--paper); }
+    @media (min-width: 760px) {
+      .equipo-card { border-right: 1px solid var(--rule); border-bottom: none; }
+      .equipo-card:last-child { border-right: none; }
+    }
+    @media (max-width: 759px) {
+      .equipo-card:last-child { border-bottom: none; }
+    }
+
+    .equipo-card-num {
+      font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 700;
+      color: var(--green); line-height: 1; margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .equipo-card-name {
+      font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+      color: var(--navy); line-height: 1.15; margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .equipo-card-role {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 18px;
+    }
+    .equipo-card-desc {
+      font-size: 0.92rem; color: var(--ink-mid); line-height: 1.7;
+      font-weight: 300; margin-bottom: 20px; flex-grow: 1;
+    }
+    .equipo-card-tags {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      padding-top: 18px; border-top: 1px solid var(--rule);
+      margin-top: auto;
+    }
+    .equipo-tag {
+      font-size: 11px; font-weight: 500; color: var(--green);
+      background: var(--green-lt); padding: 4px 10px; border-radius: 2px;
+      letter-spacing: 0.02em;
+    }
+
+    .equipo-footer {
+      margin-top: 48px; display: grid; grid-template-columns: 1fr;
+      gap: 24px; align-items: center;
+      padding: 28px 0; border-top: 1px solid var(--rule);
+    }
+    @media (min-width: 760px) { .equipo-footer { grid-template-columns: 1fr auto; } }
+    .equipo-footer p {
+      font-family: 'Playfair Display', serif; font-style: italic;
+      font-size: 1.05rem; color: var(--navy); line-height: 1.55; font-weight: 500;
+    }
+    .equipo-footer .eq-foot-meta {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 12px; color: var(--ink-soft); font-weight: 300;
+    }
+    .equipo-footer .eq-foot-meta svg { color: var(--green); }
+
+    /* ── CTA MEDIO ─────────────────────────────────────────────── */
+    .cta-mid { background: var(--white); padding: 96px 0; }
+    .cta-mid-inner {
+      border-left: 3px solid var(--green); padding-left: 40px; max-width: 620px;
+    }
+    .cta-mid-label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .cta-live-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+      box-shadow: 0 0 12px rgba(46,128,73,0.6);
+      animation: pulseDot 2s ease-in-out infinite;
+    }
+    .cta-mid h2 { margin-bottom: 14px; }
+    .cta-mid .lead { margin-bottom: 32px; max-width: 540px; }
+    .btn-scroll-top {
+      background: var(--green); color: var(--white);
+      font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 0.97rem;
+      padding: 15px 32px; border-radius: 2px; border: none; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 10px;
+      letter-spacing: 0.02em; text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 6px 18px rgba(46,128,73,0.25);
+    }
+    .btn-scroll-top:hover { background: var(--green-dk); transform: translateY(-1px); box-shadow: 0 10px 28px rgba(46,128,73,0.40); }
+    .btn-scroll-top svg { width: 16px; height: 16px; }
+    .cta-proof-row { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 24px; }
+    .cta-proof-item { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--ink-soft); font-weight: 300; }
+    .cta-proof-item svg { color: var(--green); }
+
+    /* ── TESTIMONIOS ───────────────────────────────────────────── */
+    .testimonios { background: var(--off-white); }
+    .testi-list { margin-top: 56px; display: flex; flex-direction: column; gap: 0; }
+    .testi-item {
+      padding: 44px 0; border-bottom: 1px solid var(--rule);
+      display: grid; grid-template-columns: 1fr; gap: 24px;
+    }
+    .testi-item:first-child { border-top: 1px solid var(--rule); }
+    @media (min-width: 820px) {
+      .testi-item { grid-template-columns: 1fr 200px; gap: 0 64px; align-items: center; }
+    }
+    .testi-item--featured { background: var(--green-lt); position: relative; }
+    @media (min-width: 820px) {
+      .testi-item--featured { background: transparent; }
+      .testi-item--featured::before {
+        content: ''; position: absolute; left: calc(-1 * ((100vw - 1180px) / 2 + 28px)); right: calc(-1 * ((100vw - 1180px) / 2 + 28px));
+        top: 0; bottom: 0; background: var(--green-lt); z-index: -1; opacity: 0.5;
+      }
+    }
+    .testi-quote-mark {
+      font-family: 'Playfair Display', serif; font-size: 4.2rem; line-height: 1;
+      color: var(--green); opacity: 0.25; margin-bottom: -16px; display: block;
+      font-style: italic;
+    }
+    .testi-text {
+      font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.1rem;
+      line-height: 1.7; color: var(--navy); font-weight: 500;
+    }
+    @media (max-width: 819px) { .testi-text { font-size: 1rem; } }
+    .testi-result-badge {
+      display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--green);
+      padding: 4px 10px; background: rgba(46,128,73,0.10); border-radius: 2px;
+      margin-bottom: 12px;
+    }
+    .testi-author-name { font-size: 0.93rem; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+    .testi-author-detail { font-size: 0.82rem; color: var(--ink-soft); font-weight: 300; line-height: 1.55; }
+
+    /* ── FAQ ────────────────────────────────────────────────────── */
+    .faq { background: var(--white); }
+    .faq-list { margin-top: 56px; max-width: 760px; }
+    .faq-item { border-bottom: 1px solid var(--rule); }
+    .faq-item:first-child { border-top: 1px solid var(--rule); }
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 0; cursor: pointer; font-weight: 500; font-size: 1rem;
+      color: var(--navy); user-select: none; gap: 24px; transition: color 0.2s;
+    }
+    .faq-q:hover { color: var(--green-dk); }
+    .faq-icon {
+      width: 26px; height: 26px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      color: var(--green); transition: transform 0.3s;
+    }
+    .faq-q.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      font-size: 0.92rem; color: var(--ink-mid); line-height: 1.75;
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.2s;
+      font-weight: 300; max-width: 640px;
+    }
+    .faq-a.open { max-height: 360px; padding-bottom: 24px; }
+
+    /* ── COBERTURA ─────────────────────────────────────────────── */
+    .cobertura { background: var(--paper); }
+    .cob-grid {
+      display: grid; grid-template-columns: 1fr;
+      gap: 48px; margin-top: 56px; align-items: start;
+    }
+    @media (min-width: 880px) { .cob-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+    .cob-intro .lead { max-width: 440px; margin-bottom: 28px; }
+
+    .cob-cities {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+      border-top: 1px solid var(--rule);
+    }
+    @media (min-width: 600px) { .cob-cities { grid-template-columns: repeat(3, 1fr); } }
+    .cob-city {
+      padding: 16px; border-bottom: 1px solid var(--rule);
+      border-right: 1px solid var(--rule);
+      display: flex; align-items: center; gap: 10px;
+      transition: background 0.2s;
+    }
+    .cob-city:hover { background: var(--white); }
+    .cob-city svg { color: var(--green); flex-shrink: 0; }
+    .cob-city-name { font-size: 13px; font-weight: 500; color: var(--navy); }
+    .cob-city:nth-child(2n) { border-right: none; }
+    @media (min-width: 600px) {
+      .cob-city:nth-child(2n) { border-right: 1px solid var(--rule); }
+      .cob-city:nth-child(3n) { border-right: none; }
+    }
+
+    .cob-office {
+      background: var(--white); border: 1px solid var(--rule);
+      padding: 30px; border-radius: 2px;
+    }
+    .cob-office h4 {
+      font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 600;
+      color: var(--navy); margin-bottom: 18px;
+    }
+    .cob-office-row {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 12px 0; border-top: 1px solid var(--rule);
+      font-size: 0.88rem; color: var(--ink-mid); font-weight: 300;
+    }
+    .cob-office-row:first-of-type { border-top: none; padding-top: 0; }
+    .cob-office-row svg { color: var(--green); flex-shrink: 0; margin-top: 3px; }
+    .cob-office-row strong { color: var(--navy); font-weight: 500; }
+
+    /* ── FOOTER ─────────────────────────────────────────────────── */
+    footer { background: var(--navy); padding: 72px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 56px; margin-bottom: 56px; }
+    @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+    @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .footer-logo { margin-bottom: 18px; max-width: 220px; height: auto; display: block;
+      filter: brightness(0) invert(1) sepia(0.05);
+    }
+    .footer-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.75; max-width: 280px; font-weight: 300; }
+    .footer-reg  { font-size: 11px; color: rgba(255,255,255,0.30); margin-top: 14px; letter-spacing: 0.04em; line-height: 1.6; }
+    .footer-col h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--green); margin-bottom: 20px; font-weight: 600; }
+    .footer-col a, .footer-col p { display: block; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 12px; line-height: 1.5; font-weight: 300; transition: color 0.2s; }
+    .footer-col a:hover { color: rgba(255,255,255,0.85); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; justify-content: space-between; align-items: center; }
+    .footer-bottom p { font-size: 11.5px; color: rgba(255,255,255,0.32); font-weight: 300; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 11.5px; color: rgba(255,255,255,0.32); text-decoration: none; transition: color 0.2s; font-weight: 300; }
+    .footer-links a:hover { color: rgba(255,255,255,0.65); }
+
+    /* ── COOKIE BANNER ─────────────────────────────────────────── */
+    .cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+      background: var(--white); border-top: 3px solid var(--green);
+      box-shadow: 0 -8px 32px rgba(0,0,0,0.18);
+      padding: 18px 24px;
+      transform: translateY(120%);
+      transition: transform 0.5s cubic-bezier(.16,1,.3,1);
+    }
+    .cookie-banner.visible { transform: translateY(0); }
+    .cookie-banner-inner {
+      max-width: 1180px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr;
+      gap: 16px; align-items: center;
+    }
+    @media (min-width: 760px) {
+      .cookie-banner-inner { grid-template-columns: 1fr auto; gap: 24px; }
+    }
+    .cookie-text strong {
+      display: block; font-size: 13px; font-weight: 600; color: var(--navy);
+      margin-bottom: 4px; letter-spacing: 0.02em;
+    }
+    .cookie-text p {
+      font-size: 13px; color: var(--ink-mid); line-height: 1.55;
+      font-weight: 300; max-width: 680px;
+    }
+    .cookie-text a { color: var(--green-dk); text-decoration: underline; font-weight: 500; }
+    .cookie-actions {
+      display: flex; gap: 10px; align-items: center;
+    }
+    @media (max-width: 480px) {
+      .cookie-actions { flex-direction: column-reverse; width: 100%; }
+      .cookie-actions button { width: 100%; }
+    }
+    .cookie-btn {
+      font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 13.5px;
+      padding: 11px 22px; border-radius: 2px; cursor: pointer;
+      letter-spacing: 0.02em; transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      white-space: nowrap; border: 1.5px solid transparent;
+    }
+    .cookie-btn--secondary {
+      background: transparent; color: var(--ink-mid);
+      border-color: var(--rule);
+    }
+    .cookie-btn--secondary:hover { border-color: var(--ink-soft); color: var(--navy); }
+    .cookie-btn--primary {
+      background: var(--green); color: var(--white);
+    }
+    .cookie-btn--primary:hover { background: var(--green-dk); transform: translateY(-1px); }
+
+    /* ── STICKY CTA (FAB) ─────────────────────────────────────── */
+    .fab-quiz {
+      position: fixed; bottom: 24px; right: 24px; z-index: 90;
+      background: var(--green); color: var(--white);
+      font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 14px;
+      padding: 14px 22px; border-radius: 999px; border: none; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 9px;
+      letter-spacing: 0.02em; text-decoration: none;
+      box-shadow: 0 10px 32px rgba(46,128,73,0.40), 0 2px 6px rgba(0,0,0,0.10);
+      opacity: 0; pointer-events: none;
+      transform: translateY(16px) scale(0.94);
+      transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s;
+    }
+    .fab-quiz.visible {
+      opacity: 1; pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+    .fab-quiz:hover { background: var(--green-dk); }
+    .fab-quiz svg { width: 14px; height: 14px; }
+    @media (max-width: 480px) {
+      .fab-quiz { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 13px; }
+    }
+
+    /* ── RESPONSIVE FIXES ──────────────────────────────────────── */
+    @media (max-width: 480px) {
+      .logo-text .t2 { display: none; }
+      .util-bar { font-size: 11px; }
+      .quiz-card-header { padding: 16px 20px 14px; }
+      .quiz-card-body { padding: 22px 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV (solo logo + menú desktop) -->
+<nav>
+  <div class="container nav-inner">
+    <a href="/" class="logo">
+      <img src="./assets/centrum-logo.png" alt="Centrum" class="logo-img" />
+    </a>
+    <div class="nav-menu">
+      <a href="#proceso">Cómo funciona</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#soluciones">Soluciones</a>
+      <a href="#cobertura">Cobertura</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO con QUIZ INLINE -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <!-- QUIZ CARD (en mobile aparece primero, en desktop a la derecha) -->
+      <div class="quiz-card fade-in" id="quizCard">
+        <div class="quiz-card-header">
+          <div class="quiz-card-header-top">
+            <button class="quiz-back-btn" id="quizBack" onclick="goBack()" disabled>
+              <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+              Atrás
+            </button>
+            <span class="quiz-step-label" id="quizStepLabel">Paso 1 de 5 · 90 seg</span>
+          </div>
+          <div class="quiz-progress-track">
+            <div class="quiz-progress-fill" id="quizProgressFill" style="width:20%"></div>
+          </div>
+        </div>
+        <div class="quiz-card-body" id="quizBody">
+          <!-- Inyectado por JS -->
+        </div>
+      </div>
+
+      <!-- HERO CONTENT (en mobile aparece después del quiz) -->
+      <div class="hero-content">
+        <div class="hero-eyebrow fade-in fade-in-d1">Consulta gratuita · Respuesta &lt;2 min</div>
+        <h1 class="fade-in fade-in-d2">
+          El banco presiona. Nosotros integramos <em>broker, abogado e inmobiliaria</em> para que tú <mark>salgas ganando</mark>.
+        </h1>
+        <p class="hero-sub fade-in fade-in-d3">
+          Más de 850 familias en España ya han encontrado salida. Responde cuatro preguntas y te llamamos en menos de dos minutos.
+        </p>
+        <div class="hero-callout fade-in fade-in-d4">
+          <div class="hero-callout-label">El peor resultado posible</div>
+          <p><strong>Vivir en tu casa 2–10 años sin pagar cuota ni alquiler</strong> mientras organizas tu siguiente paso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS BAR (números + sellos) -->
+<div class="creds-bar">
+  <div class="container">
+    <div class="creds-items">
+      <div class="cred-item">
+        <div class="cred-text">
+          <strong>+850</strong>
+          <span>Casos resueltos</span>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-text">
+          <strong>10+ años</strong>
+          <span>De experiencia</span>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-text">
+          <strong>Reg. BdE D219</strong>
+          <span>Intermediario hipotecario</span>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-text">
+          <strong>3 pilares</strong>
+          <span>Broker · Legal · Inmobiliaria</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<section class="steps" id="proceso">
+  <div class="container">
+    <div class="section-label fade-in">El proceso</div>
+    <h2 class="fade-in fade-in-d1">Tres pasos. Sin burocracia.<br>Sin sorpresas.</h2>
+    <div class="steps-list">
+      <div class="step-row fade-in">
+        <div class="step-num-large">01</div>
+        <div class="step-body">
+          <h3>Cuéntanos tu situación</h3>
+          <p>Cuatro preguntas. Menos de 90 segundos. Empezamos a preparar tu caso antes de llamarte.</p>
+          <div class="step-note">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            Anónimo y confidencial. Sin registros, sin spam.
+          </div>
+        </div>
+        <div class="step-badge">Online · 90 seg</div>
+      </div>
+      <div class="step-row fade-in fade-in-d1">
+        <div class="step-num-large">02</div>
+        <div class="step-body">
+          <h3>Te llamamos en 2 minutos</h3>
+          <p>Un especialista recoge los detalles clave por teléfono y agenda una consulta personal con el equipo.</p>
+          <div class="step-note">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Lunes a viernes 9–19h. Sin esperas, sin centralitas.
+          </div>
+        </div>
+        <div class="step-badge">Llamada real · &lt;2 min</div>
+      </div>
+      <div class="step-row fade-in fade-in-d2">
+        <div class="step-num-large">03</div>
+        <div class="step-body">
+          <h3>Recibes tu diagnóstico</h3>
+          <p>Opciones reales, plazos reales. Sin jerga jurídica. Broker, abogado e inmobiliaria analizan tu caso juntos. Tú decides con información completa.</p>
+          <div class="step-note">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            Documento escrito con 2–4 estrategias específicas.
+          </div>
+        </div>
+        <div class="step-badge">En 24–48 horas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIONES -->
+<section class="soluciones" id="soluciones">
+  <div class="container">
+    <div class="sol-header fade-in">
+      <div class="section-label">Lo que hacemos</div>
+      <h2>Siempre hay una salida.<br>Siempre.</h2>
+      <p class="lead">Cuatro estrategias clave. El peor escenario: vivir sin pagar cuota ni alquiler mientras reorganizas tu economía.</p>
+    </div>
+    <div class="sol-grid">
+      <div class="sol-item fade-in"><div class="sol-num">01</div><div class="sol-content"><h3>Ganar tiempo máximo</h3><p>Estrategia legal para vivir en el inmueble 2–10 años sin pagar cuota ni alquiler.</p></div></div>
+      <div class="sol-item fade-in fade-in-d1"><div class="sol-num">02</div><div class="sol-content"><h3>Dación en pago</h3><p>Entregas el inmueble al banco y la deuda queda totalmente saldada. Cierre limpio, sin reclamaciones futuras.</p></div></div>
+      <div class="sol-item fade-in fade-in-d2"><div class="sol-num">03</div><div class="sol-content"><h3>Venta con quita y remanente</h3><p>Negociamos reducción de deuda con el banco. Lo que sobre tras la venta es tuyo.</p></div></div>
+      <div class="sol-item fade-in fade-in-d3"><div class="sol-num">04</div><div class="sol-content"><h3>Reclamación de cláusulas abusivas</h3><p>80% de hipotecas previas a 2010 tienen cláusulas reclamables. Reducción + paralización.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO INTEGRADO -->
+<section class="equipo" id="equipo">
+  <div class="container">
+    <div class="equipo-intro fade-in">
+      <div class="section-label">El equipo integrado</div>
+      <h2>Tres pilares.<br>Un solo expediente.</h2>
+      <p class="lead">Cuando contactas con Centrum no contratas un servicio aislado. Conectas con un equipo de tres pilares especializados que coordinan tu caso en paralelo. Cada decisión se toma con la perspectiva de los tres: broker, abogado e inmobiliaria.</p>
+    </div>
+
+    <div class="equipo-grid">
+
+      <div class="equipo-card fade-in">
+        <div class="equipo-card-num">01</div>
+        <div class="equipo-card-name">Broker hipotecario</div>
+        <div class="equipo-card-role">Análisis · Negociación · Coordinación</div>
+        <p class="equipo-card-desc">Análisis hipotecario completo, diseño de la estrategia y negociación directa con la entidad financiera. Mantiene el caso coordinado entre los tres pilares.</p>
+        <div class="equipo-card-tags">
+          <span class="equipo-tag">Reg. BdE D219</span>
+          <span class="equipo-tag">Intermediario regulado</span>
+        </div>
+      </div>
+
+      <div class="equipo-card fade-in fade-in-d1">
+        <div class="equipo-card-num">02</div>
+        <div class="equipo-card-name">Abogado</div>
+        <div class="equipo-card-role">Derecho bancario · Defensa judicial</div>
+        <p class="equipo-card-desc">Especialistas en derecho bancario y ejecuciones hipotecarias. Reclamación de cláusulas abusivas, defensa judicial activa y respuesta a demandas. Toda la parte legal del caso.</p>
+        <div class="equipo-card-tags">
+          <span class="equipo-tag">Derecho bancario</span>
+          <span class="equipo-tag">Ejecuciones hipotecarias</span>
+        </div>
+      </div>
+
+      <div class="equipo-card fade-in fade-in-d2">
+        <div class="equipo-card-num">03</div>
+        <div class="equipo-card-name">Inmobiliaria</div>
+        <div class="equipo-card-role">Red de compradores e inversores</div>
+        <p class="equipo-card-desc">Cartera propia de inversores y compradores pre-cualificados. Daciones en pago con liquidez, ventas con quita y operaciones de reestructuración patrimonial.</p>
+        <div class="equipo-card-tags">
+          <span class="equipo-tag">Cartera propia</span>
+          <span class="equipo-tag">Liquidez inmediata</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="equipo-footer fade-in fade-in-d3">
+      <p>El banco juega solo cuando tú vas solo. Nuestro trabajo es nivelar el partido — con un equipo completo a tu lado.</p>
+      <div class="eq-foot-meta">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        +850 casos resueltos · Cobertura nacional
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="testimonios">
+  <div class="container">
+    <div class="section-label fade-in">Casos reales</div>
+    <h2 class="fade-in fade-in-d1">Familias que encontraron salida</h2>
+    <div class="testi-list">
+      <div class="testi-item testi-item--featured fade-in">
+        <div>
+          <span class="testi-quote-mark">"</span>
+          <p class="testi-text">El banco nos presionaba para que firmáramos una dación en pago sin darnos nada. El equipo de Centrum negoció una quita del 40% y conseguimos dinero para empezar de nuevo. Sin ellos no sabemos qué hubiera pasado.</p>
+        </div>
+        <div class="testi-meta">
+          <div class="testi-result-badge">Quita del 40% conseguida</div>
+          <div class="testi-author-name">J. P.</div>
+          <div class="testi-author-detail">Reus<br>Deuda hipotecaria</div>
+        </div>
+      </div>
+      <div class="testi-item fade-in fade-in-d1">
+        <div>
+          <span class="testi-quote-mark">"</span>
+          <p class="testi-text">Llevábamos 14 meses con el proceso judicial encima. En menos de una semana nos explicaron tres opciones que no sabíamos que existían. Al final conseguimos vender, saldar la deuda y quedarnos con algo de dinero.</p>
+        </div>
+        <div class="testi-meta">
+          <div class="testi-author-name">M. R.</div>
+          <div class="testi-author-detail">Tarragona<br>Ejecución hipotecaria</div>
+        </div>
+      </div>
+      <div class="testi-item fade-in fade-in-d2">
+        <div>
+          <span class="testi-quote-mark">"</span>
+          <p class="testi-text">Pensábamos que lo habíamos perdido todo. Con la estrategia de ganar tiempo seguimos viviendo en el piso casi tres años más, ahorramos dinero y pudimos rehacer nuestra vida tranquilamente.</p>
+        </div>
+        <div class="testi-meta">
+          <div class="testi-author-name">A. F.</div>
+          <div class="testi-author-detail">Salou<br>Subasta paralizada</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-label fade-in">Preguntas frecuentes</div>
+    <h2 class="fade-in fade-in-d1">Lo que más nos preguntan</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">¿La consulta inicial es realmente gratuita?
+          <span class="faq-icon"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+        </div>
+        <div class="faq-a">Sí, completamente. La primera consulta no tiene ningún coste. Analizamos tu caso y te explicamos las opciones disponibles. Solo si decides trabajar con nosotros se habla de honorarios, y siempre antes de firmar nada.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">¿Es demasiado tarde si ya tengo fecha de subasta?
+          <span class="faq-icon"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+        </div>
+        <div class="faq-a">Depende de la fecha exacta. Con subasta inminente las opciones se reducen, pero rara vez es demasiado tarde para actuar. Lo más importante es llamar hoy — cada día que pasa cierra puertas.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">¿En qué zonas de España trabajáis?
+          <span class="faq-icon"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+        </div>
+        <div class="faq-a">Operamos en todo el territorio nacional. La sede física está en Tarragona para atención presencial, y atendemos consultas en toda España de forma telemática. Si tu situación implica un proceso judicial, gestionamos casos en cualquier juzgado del país.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">¿Qué diferencia hay entre vosotros y un abogado o una inmobiliaria?
+          <span class="faq-icon"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+        </div>
+        <div class="faq-a">Un abogado solo ve la parte legal. Una inmobiliaria solo ve la venta. Un banco solo ve su interés. Nosotros integramos los tres en un solo servicio coordinado: broker hipotecario, abogado y red de compradores trabajando juntos para el mejor resultado posible para ti.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURA -->
+<section class="cobertura" id="cobertura">
+  <div class="container">
+    <div class="cob-grid">
+      <div class="cob-intro fade-in">
+        <div class="section-label">Dónde trabajamos</div>
+        <h2>Cobertura nacional.<br>Sede en Tarragona.</h2>
+        <p class="lead">Operamos en toda España, presencialmente o de forma telemática. Cualquier provincia, cualquier juzgado, cualquier banco. Sede física en Tarragona para atención presencial bajo cita.</p>
+        <div class="cob-cities">
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Madrid</span></div>
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Barcelona</span></div>
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Valencia</span></div>
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Sevilla</span></div>
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Málaga</span></div>
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Bilbao</span></div>
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Zaragoza</span></div>
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Tarragona <em style="color:var(--green);font-style:normal;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-left:4px;">Sede</em></span></div>
+          <div class="cob-city"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span class="cob-city-name">Resto del país</span></div>
+        </div>
+      </div>
+      <div class="cob-office fade-in fade-in-d1">
+        <h4>Oficina Tarragona</h4>
+        <div class="cob-office-row">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0L6.343 16.657a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <div><strong>Tarragona centro</strong><br>Atención presencial bajo cita previa</div>
+        </div>
+        <div class="cob-office-row">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <div><strong>Lun a Vie · 9h–19h</strong><br>Horario continuado</div>
+        </div>
+        <div class="cob-office-row">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <div><strong>977 00 00 00</strong><br>Línea directa</div>
+        </div>
+        <div class="cob-office-row">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <div><strong>social@centrumdelavivienda.com</strong><br>Respuesta en menos de 24h</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY CTA -->
+<button class="fab-quiz" id="fabQuiz" onclick="scrollToQuiz(event)" aria-label="Iniciar consulta">
+  Iniciar consulta
+  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+</button>
+
+<!-- COOKIE CONSENT BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentimiento de cookies">
+  <div class="cookie-banner-inner">
+    <div class="cookie-text">
+      <strong>Usamos cookies</strong>
+      <p>Cookies propias y de terceros para mejorar tu experiencia y analizar el uso del sitio. Puedes aceptar todas, rechazar las no esenciales o leer la <a href="/cookies.html">política completa</a>.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="cookie-btn cookie-btn--secondary" onclick="cookieChoice('reject')">Rechazar</button>
+      <button class="cookie-btn cookie-btn--primary" onclick="cookieChoice('accept')">Aceptar todas</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT STRIP (antes era util-bar arriba; ahora al final) -->
+<div class="util-bar util-bar--bottom">
+  <div class="container util-inner">
+    <div class="util-left">
+      <div class="util-item">
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <a href="tel:+34977000000">977 00 00 00</a>
+      </div>
+      <div class="util-item">
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Lun–Vie 9h–19h
+      </div>
+    </div>
+    <div class="util-right">
+      <div class="util-item">
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0L6.343 16.657a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Tarragona · Cataluña
+      </div>
+      <div class="util-item">
+        <a href="mailto:social@centrumdelavivienda.com">social@centrumdelavivienda.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="./assets/centrum-logo.png" alt="Centrum" class="footer-logo" />
+        <p class="footer-desc">Broker hipotecario, abogados especialistas e inmobiliaria propia trabajando juntos para proteger a las familias con deuda hipotecaria en toda España.</p>
+        <p class="footer-reg">Mediterrane Firmax SL<br>Reg. Banco de España D219<br>Tarragona · Cataluña</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicio</h4>
+        <a href="#proceso">Cómo funciona</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#cobertura">Cobertura</a>
+      </div>
+      <div class="footer-col">
+        <h4>Cobertura</h4>
+        <a href="#cobertura">Toda España</a>
+        <a href="#cobertura">Madrid · Barcelona</a>
+        <a href="#cobertura">Valencia · Sevilla</a>
+        <a href="#cobertura">Bilbao · Málaga</a>
+        <a href="#cobertura">Tarragona (sede)</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>Tarragona, Cataluña</p>
+        <p>Lun a Vie · 9h–19h</p>
+        <a href="tel:+34977000000">977 00 00 00</a>
+        <a href="mailto:social@centrumdelavivienda.com">social@centrumdelavivienda.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Mediterrane Firmax SL. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/aviso-legal.html">Aviso legal</a>
+        <a href="/cookies.html">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── QUIZ INLINE LOGIC ─────────────────────────────────────────
+  const steps = [
+    {
+      q: '¿Has recibido ya algún papel del banco o del juzgado?',
+      options: [
+        { icon: '⚖️', text: 'Sí, del juzgado (demanda o notificación judicial)' },
+        { icon: '📬', text: 'Sí, del banco (carta de reclamación o aviso)' },
+        { icon: '📅', text: 'No, pero llevo meses sin pagar' },
+        { icon: '💡', text: 'Estoy al día pero ya no puedo más' },
+      ]
+    },
+    {
+      q: '¿Qué resultado necesitas?',
+      options: [
+        { icon: '🏠', text: 'Quedarme en el piso el máximo tiempo posible' },
+        { icon: '✅', text: 'Saldar la deuda sin que quede nada pendiente' },
+        { icon: '💰', text: 'Vender el piso y quedarme con algo de dinero' },
+        { icon: '🧭', text: 'No sé, necesito que alguien me oriente' },
+      ]
+    },
+    {
+      q: '¿Cómo está la relación entre lo que debes y lo que vale el piso?',
+      options: [
+        { icon: '📉', text: 'Debo más de lo que vale el piso actualmente' },
+        { icon: '⚖️', text: 'Debo aproximadamente lo mismo que vale' },
+        { icon: '📈', text: 'El piso vale más de lo que debo' },
+        { icon: '❓', text: 'No tengo idea del valor actual del piso' },
+      ]
+    },
+    {
+      q: '¿Cuál es la situación económica en casa ahora mismo?',
+      options: [
+        { icon: '🚫', text: 'Sin ingresos actualmente' },
+        { icon: '📊', text: 'Ingresos insuficientes para cubrir la hipoteca' },
+        { icon: '💼', text: 'Tenemos ingresos pero la deuda acumulada es demasiado grande' },
+        { icon: '🔄', text: 'La situación mejoró pero nos ahogamos con la deuda anterior' },
+      ]
+    }
+  ];
+
+  let currentStep = 0;
+  let answers = [];
+
+  function renderStep() {
+    const total = steps.length + 1;
+    const progress = ((currentStep + 1) / (total + 1)) * 100;
+    const fill = document.getElementById('quizProgressFill');
+    const label = document.getElementById('quizStepLabel');
+    const back  = document.getElementById('quizBack');
+    fill.style.width = progress + '%';
+
+    if (currentStep < steps.length) {
+      label.textContent = `Paso ${currentStep + 1} de ${total} · 90 seg`;
+    } else if (currentStep === steps.length) {
+      label.textContent = `Paso ${currentStep + 1} de ${total} · Casi listo`;
+      fill.style.width = '90%';
+    } else {
+      label.textContent = 'Completado';
+      fill.style.width = '100%';
+    }
+
+    back.disabled = (currentStep === 0 || currentStep > steps.length);
+
+    if (currentStep < steps.length) renderQuestion();
+    else if (currentStep === steps.length) renderContact();
+    else renderConfirm();
+  }
+
+  function transitionTo(renderFn) {
+    const body = document.getElementById('quizBody');
+    body.classList.add('transitioning');
+    setTimeout(() => {
+      renderFn();
+      body.classList.remove('transitioning');
+    }, 220);
+  }
+
+  function renderQuestion() {
+    const s = steps[currentStep];
+    const opts = s.options.map((o, i) => `
+      <button class="quiz-option" onclick="selectOption(${i})">
+        <span class="opt-icon">${o.icon}</span>
+        <span class="opt-text">${o.text}</span>
+        <svg class="opt-arrow" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </button>`).join('');
+    document.getElementById('quizBody').innerHTML = `
+      <div class="quiz-eyebrow">Pregunta ${currentStep + 1} de ${steps.length}</div>
+      <h3 class="quiz-question">${s.q}</h3>
+      <div class="quiz-options">${opts}</div>
+      <div class="quiz-foot">
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <span><strong>Anónimo y confidencial</strong> · No te llamamos hasta el paso 5</span>
+      </div>`;
+  }
+
+  function renderContact() {
+    document.getElementById('quizBody').innerHTML = `
+      <div class="quiz-eyebrow">Último paso · 30 segundos</div>
+      <h3 class="quiz-question">Casi listo — ¿a dónde te llamamos?</h3>
+      <div class="quiz-contact">
+        <div class="quiz-field-group">
+          <div class="quiz-field">
+            <label>Nombre <span class="req">*</span></label>
+            <input type="text" id="f-nombre" placeholder="Tu nombre" autocomplete="given-name" />
+          </div>
+          <div class="quiz-field">
+            <label>Teléfono <span class="req">*</span></label>
+            <input type="tel" id="f-tel" placeholder="6XX XXX XXX" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="quiz-field">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="f-email" placeholder="tucorreo@gmail.com" autocomplete="email" />
+        </div>
+        <div class="quiz-rgpd">
+          <input type="checkbox" id="rgpd" />
+          <label for="rgpd">Acepto la <a href="/privacidad.html" target="_blank">política de privacidad</a>. Mediterrane Firmax SL tratará mis datos para contactarme sobre mi consulta.</label>
+        </div>
+        <button class="quiz-submit" onclick="submitQuiz()">
+          Quiero que me llamen ahora
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+      </div>`;
+  }
+
+  function renderConfirm() {
+    const nombre = (document.getElementById('f-nombre') ? document.getElementById('f-nombre').value : window._capturedName || '').split(' ')[0];
+    document.getElementById('quizBody').innerHTML = `
+      <div class="quiz-confirm">
+        <div class="confirm-icon">✓</div>
+        <h3>Perfecto${nombre ? ', ' + nombre : ''}.</h3>
+        <p>Uno de nuestros especialistas te llama en <span class="confirm-highlight">menos de 2 minutos</span> para recabar los detalles de tu caso.</p>
+        <p style="margin-top:10px">Después el equipo te enviará un diagnóstico con las opciones reales para tu situación.</p>
+        <div class="confirm-rows">
+          <div class="confirm-row">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Llamada en menos de 2 minutos
+          </div>
+          <div class="confirm-row">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Diagnóstico en 24–48 horas
+          </div>
+          <div class="confirm-row">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            Datos protegidos · RGPD
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function selectOption(idx) {
+    answers[currentStep] = { q: steps[currentStep].q, a: steps[currentStep].options[idx].text };
+    currentStep++;
+    transitionTo(renderStep);
+  }
+
+  function goBack() {
+    if (currentStep > 0 && currentStep <= steps.length) {
+      currentStep--;
+      transitionTo(renderStep);
+    }
+  }
+
+  function submitQuiz() {
+    const nombre = document.getElementById('f-nombre').value.trim();
+    const tel    = document.getElementById('f-tel').value.trim();
+    const email  = document.getElementById('f-email').value.trim();
+    const rgpd   = document.getElementById('rgpd').checked;
+    if (!nombre || !tel || !email) { alert('Por favor, rellena nombre, teléfono y email.'); return; }
+    if (!rgpd) { alert('Necesitamos tu consentimiento para contactarte.'); return; }
+    window._capturedName = nombre;
+    const payload = {
+      fuente: 'landing-web',
+      nombre, telefono: tel.replace(/[\s.-]/g, ''), email, rgpd: true,
+      fase: (answers[0] || {}).a || '', objetivo: (answers[1] || {}).a || '',
+      respuestas: answers, url: location.href, timestamp: new Date().toISOString()
+    };
+    fetch('https://centrum-crm.lukimporta.es/', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(() => {});
+    currentStep++;
+    transitionTo(renderStep);
+  }
+
+  // ── SCROLL TO QUIZ ────────────────────────────────────────────
+  function scrollToQuiz(e) {
+    if (e) e.preventDefault();
+    document.getElementById('hero').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => {
+      const card = document.getElementById('quizCard');
+      card.style.transition = 'box-shadow 0.4s ease, transform 0.4s ease';
+      card.style.boxShadow = '0 28px 80px rgba(46,128,73,0.45), 0 2px 8px rgba(0,0,0,0.15)';
+      card.style.transform = 'translateY(-3px)';
+      setTimeout(() => {
+        card.style.boxShadow = '';
+        card.style.transform = '';
+      }, 900);
+    }, 700);
+  }
+
+  // ── FAQ TOGGLE ────────────────────────────────────────────────
+  function toggleFaq(el) {
+    const a = el.nextElementSibling;
+    const isOpen = a.classList.contains('open');
+    document.querySelectorAll('.faq-q').forEach(q => { q.classList.remove('open'); q.nextElementSibling.classList.remove('open'); });
+    if (!isOpen) { el.classList.add('open'); a.classList.add('open'); }
+  }
+
+  // ── SCROLL ANIMATIONS ─────────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── COOKIE CONSENT ────────────────────────────────────────────
+  const cookieBanner = document.getElementById('cookieBanner');
+  function showCookieBanner() { cookieBanner.classList.add('visible'); }
+  function hideCookieBanner() { cookieBanner.classList.remove('visible'); }
+  function cookieChoice(choice) {
+    try {
+      localStorage.setItem('cookie-consent', choice);
+      localStorage.setItem('cookie-consent-date', new Date().toISOString());
+    } catch (e) { /* localStorage no disponible */ }
+    hideCookieBanner();
+    if (choice === 'accept') {
+      // Aquí se cargaría Meta Pixel / Google Analytics si están configurados.
+      // window.fbq && fbq('consent', 'grant');
+      // window.gtag && gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted' });
+    }
+  }
+  window.openCookieBanner = () => {
+    try { localStorage.removeItem('cookie-consent'); } catch (e) {}
+    showCookieBanner();
+  };
+  (function initCookieBanner() {
+    let choice = null;
+    try { choice = localStorage.getItem('cookie-consent'); } catch (e) {}
+    if (!choice) setTimeout(showCookieBanner, 600);
+  })();
+
+  // ── FLOATING CTA (visible after hero) ─────────────────────────
+  const fab = document.getElementById('fabQuiz');
+  const heroEl = document.getElementById('hero');
+  const fabObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) fab.classList.remove('visible');
+      else fab.classList.add('visible');
+    });
+  }, { threshold: 0.2 });
+  if (heroEl) fabObserver.observe(heroEl);
+
+  // ── INIT ──────────────────────────────────────────────────────
+  renderStep();
+</script>
+</body>
+</html>
