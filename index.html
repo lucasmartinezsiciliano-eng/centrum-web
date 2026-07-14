@@ -7,9 +7,51 @@
   <meta name="description" content="Si tienes cuotas atrasadas o ya has recibido papeles del juzgado, hay opciones. Broker hipotecario, abogados e inmobiliaria en un solo equipo. Cobertura nacional, sede en Tarragona. Te llamamos en menos de 2 minutos." />
   <link rel="canonical" href="https://centrumdelavivienda.com/" />
   <link rel="icon" type="image/png" href="./assets/centrum-mark.png" />
+  <meta name="theme-color" content="#1B3458" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="apple-touch-icon" href="./assets/centrum-mark.png" />
+  <link rel="preload" as="image" href="./assets/centrum-logo.png" fetchpriority="high" />
+  <meta property="og:site_name" content="Centrum de la Vivienda" />
   <meta property="og:title" content="Centrum de la Vivienda — Tu Vivienda, Nuestra Misión" />
   <meta property="og:description" content="Si el banco te presiona o ya tienes demanda, hay opciones. Consulta gratuita, te llamamos en menos de 2 minutos." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://centrumdelavivienda.com/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="https://centrumdelavivienda.com/assets/centrum-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Centrum de la Vivienda — Broker, abogados e inmobiliaria" />
+  <meta name="twitter:description" content="Si el banco te presiona o ya tienes demanda, hay opciones. Consulta gratuita." />
+  <meta name="twitter:image" content="https://centrumdelavivienda.com/assets/centrum-logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Centrum de la Vivienda",
+    "legalName": "Mediterránea Firmax SL",
+    "url": "https://centrumdelavivienda.com/",
+    "image": "https://centrumdelavivienda.com/assets/centrum-logo.png",
+    "description": "Broker hipotecario, abogados e inmobiliaria trabajando juntos para ayudar a familias con deuda hipotecaria o riesgo de ejecución en España.",
+    "priceRange": "Consulta inicial gratuita",
+    "areaServed": "ES",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tarragona", "addressCountry": "ES" },
+    "identifier": { "@type": "PropertyValue", "name": "Registro Banco de España", "value": "D219" },
+    "knowsAbout": ["ejecución hipotecaria", "dación en pago", "cláusulas abusivas", "reunificación de deuda", "subasta inmobiliaria"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿La consulta inicial es realmente gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, completamente. La primera consulta no tiene ningún coste. Analizamos tu caso y te explicamos las opciones. Solo si decides trabajar con nosotros se habla de honorarios, y siempre antes de firmar nada." } },
+      { "@type": "Question", "name": "¿Es demasiado tarde si ya tengo fecha de subasta?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la fecha exacta. Con subasta inminente las opciones se reducen, pero rara vez es demasiado tarde para actuar. Lo más importante es llamar hoy: cada día que pasa cierra puertas." } },
+      { "@type": "Question", "name": "¿En qué zonas de España trabajáis?", "acceptedAnswer": { "@type": "Answer", "text": "Operamos en todo el territorio nacional. La sede física está en Tarragona para atención presencial, y atendemos consultas en toda España de forma telemática." } },
+      { "@type": "Question", "name": "¿Qué diferencia hay entre vosotros y un abogado o una inmobiliaria?", "acceptedAnswer": { "@type": "Answer", "text": "Un abogado ve la parte legal, una inmobiliaria la venta y el banco su interés. Nosotros integramos broker hipotecario, abogado y red de compradores en un único servicio coordinado hacia el mejor resultado posible para ti." } }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -48,6 +90,12 @@
     .fade-in-d2 { transition-delay: 0.16s; }
     .fade-in-d3 { transition-delay: 0.24s; }
     .fade-in-d4 { transition-delay: 0.32s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .fade-in { opacity: 1 !important; transform: none !important; }
+    }
 
     /* ── UTILITY BAR ───────────────────────────────────────────── */
     .util-bar {
@@ -826,7 +874,7 @@
 <nav>
   <div class="container nav-inner">
     <a href="/" class="logo">
-      <img src="./assets/centrum-logo.png" alt="Centrum" class="logo-img" />
+      <img src="./assets/centrum-logo.png" alt="Centrum de la Vivienda" class="logo-img" width="1103" height="620" decoding="async" fetchpriority="high" />
     </a>
     <div class="nav-menu">
       <a href="#proceso">Cómo funciona</a>
@@ -1197,9 +1245,9 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="./assets/centrum-logo.png" alt="Centrum" class="footer-logo" />
+        <img src="./assets/centrum-logo.png" alt="Centrum de la Vivienda" class="footer-logo" width="1103" height="620" loading="lazy" decoding="async" />
         <p class="footer-desc">Broker hipotecario, abogados especialistas e inmobiliaria propia trabajando juntos para proteger a las familias con deuda hipotecaria en toda España.</p>
-        <p class="footer-reg">Mediterrane Firmax SL<br>Reg. Banco de España D219<br>Tarragona · Cataluña</p>
+        <p class="footer-reg">Mediterránea Firmax SL<br>Reg. Banco de España D219<br>Tarragona · Cataluña</p>
       </div>
       <div class="footer-col">
         <h4>Servicio</h4>
@@ -1225,7 +1273,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Mediterrane Firmax SL. Todos los derechos reservados.</p>
+      <p>© 2026 Mediterránea Firmax SL. Todos los derechos reservados.</p>
       <div class="footer-links">
         <a href="/privacidad.html">Privacidad</a>
         <a href="/aviso-legal.html">Aviso legal</a>
@@ -1338,21 +1386,21 @@
       <div class="quiz-contact">
         <div class="quiz-field-group">
           <div class="quiz-field">
-            <label>Nombre <span class="req">*</span></label>
-            <input type="text" id="f-nombre" placeholder="Tu nombre" autocomplete="given-name" />
+            <label for="f-nombre">Nombre <span class="req">*</span></label>
+            <input type="text" id="f-nombre" placeholder="Tu nombre" autocomplete="given-name" required />
           </div>
           <div class="quiz-field">
-            <label>Teléfono <span class="req">*</span></label>
-            <input type="tel" id="f-tel" placeholder="6XX XXX XXX" autocomplete="tel" />
+            <label for="f-tel">Teléfono <span class="req">*</span></label>
+            <input type="tel" id="f-tel" placeholder="6XX XXX XXX" autocomplete="tel" inputmode="tel" required />
           </div>
         </div>
         <div class="quiz-field">
-          <label>Email <span class="req">*</span></label>
-          <input type="email" id="f-email" placeholder="tucorreo@gmail.com" autocomplete="email" />
+          <label for="f-email">Email <span class="req">*</span></label>
+          <input type="email" id="f-email" placeholder="tucorreo@gmail.com" autocomplete="email" inputmode="email" required />
         </div>
         <div class="quiz-rgpd">
           <input type="checkbox" id="rgpd" />
-          <label for="rgpd">Acepto la <a href="/privacidad.html" target="_blank">política de privacidad</a>. Mediterrane Firmax SL tratará mis datos para contactarme sobre mi consulta.</label>
+          <label for="rgpd">Acepto la <a href="/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>. Mediterránea Firmax SL tratará mis datos para contactarme sobre mi consulta.</label>
         </div>
         <button class="quiz-submit" onclick="submitQuiz()">
           Quiero que me llamen ahora
@@ -1399,17 +1447,23 @@
     }
   }
 
+  let _submitting = false;
   function submitQuiz() {
+    if (_submitting) return;
     const nombre = document.getElementById('f-nombre').value.trim();
-    const tel    = document.getElementById('f-tel').value.trim();
     const email  = document.getElementById('f-email').value.trim();
     const rgpd   = document.getElementById('rgpd').checked;
+    const tel    = document.getElementById('f-tel').value.trim().replace(/[\s.\-()]/g, '');
     if (!nombre || !tel || !email) { alert('Por favor, rellena nombre, teléfono y email.'); return; }
+    if (!/^(\+?34)?[6-9]\d{8}$/.test(tel)) { alert('Introduce un teléfono español válido (9 dígitos).'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Revisa tu dirección de email.'); return; }
     if (!rgpd) { alert('Necesitamos tu consentimiento para contactarte.'); return; }
+    _submitting = true;
     window._capturedName = nombre;
+    const telefono = tel.startsWith('+') ? tel : (tel.startsWith('34') ? '+' + tel : '+34' + tel);
     const payload = {
       fuente: 'landing-web',
-      nombre, telefono: tel.replace(/[\s.-]/g, ''), email, rgpd: true,
+      nombre, telefono, email, rgpd: true,
       fase: (answers[0] || {}).a || '', objetivo: (answers[1] || {}).a || '',
       respuestas: answers, url: location.href, timestamp: new Date().toISOString()
     };
