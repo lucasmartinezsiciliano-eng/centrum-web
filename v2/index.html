@@ -172,13 +172,72 @@
     }
     .nav-cta:hover { background:var(--green-dk); transform: translateY(-1px); }
     .burger { background:none; border:none; color:#fff; cursor:pointer; padding:4px; display:flex; }
+    /* ── Menú móvil pro ── */
     .mobile-menu {
-      position:fixed; inset:0; background:rgba(14,31,73,.96); z-index:30;
-      display:none; flex-direction:column; align-items:center; justify-content:center; gap:26px;
+      position:fixed; inset:0; z-index:30; display:none; flex-direction:column;
+      padding: 22px 26px 32px;
+      background: linear-gradient(165deg, rgba(14,31,73,.97) 0%, rgba(8,18,45,.99) 100%);
+      backdrop-filter: blur(24px) saturate(140%);
+      -webkit-backdrop-filter: blur(24px) saturate(140%);
+      overflow-y: auto;
     }
-    .mobile-menu.open { display:flex; }
-    .mobile-menu a { color:#fff; font-size:24px; text-decoration:none; font-family:'Playfair Display',serif; }
-    .mobile-close { position:absolute; top:18px; right:18px; background:none; border:none; color:#fff; cursor:pointer; }
+    .mobile-menu.open { display:flex; animation: fadeIn .28s var(--ease) both; }
+    .mobile-menu-top {
+      display:flex; align-items:center; justify-content:space-between; margin-bottom: 40px;
+    }
+    .mobile-menu-top img { height:34px; width:auto; }
+    .mobile-close {
+      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+      color:#fff; cursor:pointer; width:42px; height:42px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center; transition: background .2s;
+    }
+    .mobile-close:hover { background:rgba(255,255,255,.12); }
+    .mm-label {
+      font-size:11px; font-weight:500; letter-spacing:.18em; text-transform:uppercase;
+      color: var(--green-lt); margin-bottom:14px;
+    }
+    .mm-links { display:flex; flex-direction:column; margin-bottom: 32px; }
+    .mm-link {
+      display:flex; align-items:center; justify-content:space-between;
+      color:#fff; text-decoration:none; font-family:'Playfair Display',serif; font-weight:500;
+      font-size:26px; letter-spacing:-0.02em; padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: color .2s, padding .25s var(--ease);
+    }
+    .mm-link:hover, .mm-link:focus { color: var(--green-lt); padding-left: 6px; }
+    .mm-link .mm-arrow { opacity:.4; font-size:22px; transition: opacity .2s, transform .25s var(--ease); }
+    .mm-link:hover .mm-arrow { opacity:1; transform: translateX(4px); }
+    .mm-cta {
+      display:flex; align-items:center; justify-content:center; gap:10px;
+      background: var(--green); color:#fff; text-decoration:none;
+      border-radius:12px; padding: 18px 22px; margin-bottom: 28px;
+      font-family:'Outfit',sans-serif; font-size:17px; font-weight:500; letter-spacing:-0.01em;
+      box-shadow: 0 14px 34px rgba(59,127,76,.4);
+      transition: background .2s, transform .2s;
+    }
+    .mm-cta:hover { background: var(--green-dk); transform: translateY(-1px); }
+    .mm-social {
+      display:flex; align-items:center; gap:14px; padding: 16px 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.85); text-decoration:none;
+      transition: color .2s;
+    }
+    .mm-social:hover { color: #E1306C; }
+    .mm-social-ico {
+      width:44px; height:44px; border-radius:50%;
+      background: rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14);
+      display:flex; align-items:center; justify-content:center; flex:none;
+    }
+    .mm-social-txt { display:flex; flex-direction:column; gap:2px; }
+    .mm-social-h { font-family:'Outfit',sans-serif; font-size:15px; font-weight:500; color:#fff; }
+    .mm-social-s { font-size:13px; color: rgba(255,255,255,.55); }
+    .mm-foot {
+      margin-top:auto; padding-top: 26px;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .mm-foot-item { display:flex; align-items:center; gap:10px; color: rgba(255,255,255,.62); font-size:13.5px; }
+    .mm-foot-item svg { flex:none; color: var(--green-lt); }
 
     /* ── Contenido hero ── */
     .hero-main { flex:1; display:flex; flex-direction:column; justify-content:center; position:relative; z-index:10; padding: 22px 20px 30px; }
@@ -252,7 +311,7 @@
       align-self:flex-start; position:relative; z-index:2; transition: gap .25s var(--ease);
     }
     .p1-link:hover { gap:13px; }
-    .p1-deco { position:absolute; right:0; bottom:0; height:100%; width:auto; z-index:1; mix-blend-mode: multiply; opacity:.85; }
+    .p1-deco { position:absolute; right:0; bottom:0; height:100%; width:auto; z-index:1; opacity:.95; }
 
     .p2 { background: #FEFDF9; min-height:180px; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); }
     .p2-stage { position:relative; flex:1; min-height:118px; }
@@ -509,18 +568,46 @@
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-close" onclick="toggleMenu(false)" aria-label="Cerrar menú">
-      <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-    <a href="#quienes" onclick="toggleMenu(false)">Quiénes somos</a>
-    <a href="#que-hacemos" onclick="toggleMenu(false)">Qué hacemos</a>
-    <a href="#casos" onclick="toggleMenu(false)">Casos</a>
-    <a href="#faq" onclick="toggleMenu(false)">Preguntas</a>
-    <a href="https://instagram.com/centrum_vivienda" target="_blank" rel="noopener" onclick="toggleMenu(false)" style="color:rgba(255,255,255,.72);font-size:18px;display:inline-flex;align-items:center;gap:10px">
-      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      Instagram
+    <div class="mobile-menu-top">
+      <img src="../assets/centrum-logo-trans.png" alt="Centrum de la Vivienda" />
+      <button class="mobile-close" onclick="toggleMenu(false)" aria-label="Cerrar menú">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="mm-label">Navegación</div>
+    <div class="mm-links">
+      <a class="mm-link" href="#quienes" onclick="toggleMenu(false)">Quiénes somos <span class="mm-arrow">→</span></a>
+      <a class="mm-link" href="#que-hacemos" onclick="toggleMenu(false)">Qué hacemos <span class="mm-arrow">→</span></a>
+      <a class="mm-link" href="#casos" onclick="toggleMenu(false)">Casos <span class="mm-arrow">→</span></a>
+      <a class="mm-link" href="#faq" onclick="toggleMenu(false)">Preguntas <span class="mm-arrow">→</span></a>
+    </div>
+
+    <a class="mm-cta" href="/analisis/" onclick="toggleMenu(false)">
+      Empezar análisis gratis
+      <svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7m0 0H8m9 0v9"/></svg>
     </a>
-    <a href="/analisis/" style="color:#79C98E">Empezar análisis →</a>
+
+    <a class="mm-social" href="https://instagram.com/centrum_vivienda" target="_blank" rel="noopener" onclick="toggleMenu(false)">
+      <span class="mm-social-ico">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <span class="mm-social-txt">
+        <span class="mm-social-h">Instagram</span>
+        <span class="mm-social-s">@centrum_vivienda</span>
+      </span>
+    </a>
+
+    <div class="mm-foot">
+      <div class="mm-foot-item">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        Análisis anónimo en 90 segundos
+      </div>
+      <div class="mm-foot-item">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        Broker, abogados e inmobiliaria bajo un mismo techo
+      </div>
+    </div>
   </div>
 
   <!-- ══ HERO ══ -->
