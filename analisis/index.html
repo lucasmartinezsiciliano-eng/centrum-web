@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análisis gratuito y anónimo — Centrum de la Vivienda</title>
+  <meta name="description" content="Cuatro preguntas, 90 segundos, sin dar tu nombre hasta el final. Descubre en qué punto estás realmente y qué opciones tienes." />
+  <!-- Landing de publicidad: no compite en SEO con la home ni genera contenido duplicado -->
+  <meta name="robots" content="noindex,follow" />
+  <link rel="icon" type="image/png" href="../assets/centrum-mark.png" />
+  <meta name="theme-color" content="#18316C" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta property="og:title" content="¿En qué punto estás realmente? Análisis gratuito y anónimo" />
+  <meta property="og:description" content="Cuatro preguntas, 90 segundos, sin dar tu nombre hasta el final." />
+  <meta property="og:image" content="https://centrumdelavivienda.com/assets/centrum-logo.png" />
+  <meta property="og:locale" content="es_ES" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:     #18316C;
+      --navy-dk:  #0E1F49;
+      --green:    #3B7F4C;
+      --green-dk: #2E6B3D;
+      --cream:    #EFE8DA;
+      --paper:    #FBF9F4;
+      --ink:      #1A1A1A;
+      --ink-mid:  #454F66;
+      --rule:     #E4E0D8;
+      --red:      #B83227;
+      --ease:     cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    body {
+      font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+      min-height: 100svh; display:flex; flex-direction:column; color:#fff;
+      -webkit-font-smoothing: antialiased;
+      background:
+        radial-gradient(900px 520px at 82% 12%, rgba(59,127,76,.20), transparent 62%),
+        radial-gradient(760px 460px at 6% 92%, rgba(42,71,133,.42), transparent 60%),
+        linear-gradient(165deg, var(--navy) 0%, var(--navy-dk) 100%);
+    }
+    @keyframes fadeUp { from { opacity:0; transform: translateY(14px); } to { opacity:1; transform:none; } }
+
+    /* ── Cabecera mínima: identifica la marca, no distrae ── */
+    header { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; gap:12px; }
+    .brand { display:flex; align-items:center; text-decoration:none; }
+    .brand img { height:28px; width:auto; display:block; }
+    .hd-trust { display:flex; align-items:center; gap:6px; color:rgba(255,255,255,.6); font-size:12px; }
+
+    main { flex:1; display:flex; align-items:center; justify-content:center; padding: 8px 16px 26px; }
+
+    .card {
+      width:100%; max-width: 620px; background: var(--paper); border-radius:16px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.42); overflow:hidden;
+      animation: fadeUp .55s var(--ease) both;
+    }
+
+    /* ── Progreso ── */
+    .prog-top { padding: 18px 22px 0; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .prog-label { font-size:12px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; color:var(--green); }
+    .btn-back {
+      background:none; border:none; cursor:pointer; color:var(--ink-mid); font-family:'Outfit',sans-serif;
+      font-size:13px; display:flex; align-items:center; gap:5px; padding:4px;
+    }
+    .btn-back:disabled { opacity:0; pointer-events:none; }
+    .prog-track { height:3px; background: var(--rule); margin:12px 22px 0; border-radius:100px; overflow:hidden; }
+    .prog-fill { height:100%; background: var(--green); border-radius:100px; width:20%; transition: width .45s var(--ease); }
+
+    /* ── Cuerpo ── */
+    .body { padding: 24px 22px 26px; transition: opacity .2s ease, transform .2s ease; }
+    .body.out { opacity:0; transform: translateY(8px); }
+
+    .eyebrow { font-size:12.5px; color:var(--ink-mid); margin-bottom:9px; }
+    h1.q {
+      font-family:'Playfair Display', serif; font-weight:500; color: var(--navy);
+      font-size: clamp(22px, 5vw, 30px); line-height:1.16; letter-spacing:-0.02em; margin-bottom:20px;
+    }
+
+    .opts { display:flex; flex-direction:column; gap:9px; }
+    .opt {
+      display:flex; align-items:center; gap:13px; width:100%; text-align:left; cursor:pointer;
+      background:#fff; border:1px solid var(--rule); border-radius:11px; padding:15px 16px;
+      font-family:'Outfit',sans-serif; font-size:15.5px; color:var(--ink); line-height:1.35;
+      transition: border-color .18s, background .18s, transform .18s var(--ease);
+    }
+    .opt:hover { border-color: var(--green); background:#fff; transform: translateX(3px); }
+    .opt-ico { flex:none; font-size:20px; line-height:1; }
+    .opt-txt { flex:1; }
+    .opt-arw { flex:none; color:var(--rule); transition: color .18s, transform .18s var(--ease); }
+    .opt:hover .opt-arw { color: var(--green); transform: translateX(2px); }
+
+    .foot-note {
+      margin-top:18px; display:flex; align-items:center; gap:7px;
+      font-size:12.5px; color:var(--ink-mid); line-height:1.4;
+    }
+    .foot-note svg { flex:none; color: var(--green); }
+
+    /* ── Contacto ── */
+    .fields { display:flex; flex-direction:column; gap:13px; }
+    .frow { display:grid; grid-template-columns:1fr; gap:13px; }
+    .field label { display:block; font-size:12.5px; font-weight:500; color:var(--ink-mid); margin-bottom:6px; }
+    .field label .req { color: var(--red); }
+    .field input {
+      width:100%; border:1px solid var(--rule); border-radius:9px; padding:13px 14px;
+      font-family:'Outfit',sans-serif; font-size:16px; color:var(--ink); background:#fff;
+      transition: border-color .18s, box-shadow .18s;
+    }
+    .field input:focus { outline:none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(59,127,76,.14); }
+    .field input.err { border-color: var(--red); box-shadow: 0 0 0 3px rgba(184,50,39,.12); }
+    .field .msg { font-size:12px; color:var(--red); margin-top:5px; display:none; }
+    .field .msg.on { display:block; }
+
+    .rgpd { display:flex; gap:10px; align-items:flex-start; margin-top:3px; }
+    .rgpd input { flex:none; width:17px; height:17px; margin-top:2px; accent-color: var(--green); }
+    .rgpd label { font-size:12.5px; line-height:1.5; color:var(--ink-mid); }
+    .rgpd a { color: var(--green); }
+
+    .submit {
+      margin-top:6px; width:100%; height:56px; border:none; border-radius:11px; cursor:pointer;
+      background: var(--green); color:#fff; font-family:'Outfit',sans-serif; font-size:17px; font-weight:500;
+      display:flex; align-items:center; justify-content:center; gap:9px;
+      transition: background .2s, transform .2s var(--ease);
+      box-shadow: 0 10px 26px rgba(59,127,76,.3);
+    }
+    .submit:hover { background: var(--green-dk); transform: translateY(-2px); }
+    .submit:disabled { opacity:.6; pointer-events:none; }
+
+    /* ── Confirmación ── */
+    .confirm { text-align:center; padding: 12px 0 6px; }
+    .confirm-ico {
+      width:56px; height:56px; border-radius:50%; background: var(--green); color:#fff;
+      display:flex; align-items:center; justify-content:center; font-size:28px; margin:0 auto 18px;
+    }
+    .confirm h1 { font-family:'Playfair Display',serif; font-weight:500; font-size:27px; color:var(--navy); margin-bottom:12px; letter-spacing:-0.02em; }
+    .confirm p { font-size:15.5px; line-height:1.6; color:var(--ink-mid); max-width:44ch; margin:0 auto; }
+    .hl { color: var(--green); font-weight:500; }
+    .rows { margin-top:22px; display:flex; flex-direction:column; gap:9px; text-align:left; }
+    .row {
+      display:flex; align-items:center; gap:10px; background:#fff; border:1px solid var(--rule);
+      border-radius:9px; padding:12px 14px; font-size:14px; color:var(--ink-mid);
+    }
+    .row svg { flex:none; color: var(--green); }
+
+    /* ── Pie legal ── */
+    .legal { text-align:center; padding: 0 20px 22px; color: rgba(255,255,255,.42); font-size:11.5px; line-height:1.6; }
+    .legal a { color: rgba(255,255,255,.62); }
+
+    @media (min-width: 560px) {
+      header { padding: 20px 28px; }
+      .prog-top { padding: 22px 28px 0; }
+      .prog-track { margin: 12px 28px 0; }
+      .body { padding: 26px 28px 30px; }
+      .frow { grid-template-columns: 1fr 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="/" aria-label="Centrum de la Vivienda">
+    <img src="../assets/centrum-logo-trans.png" alt="Centrum de la Vivienda" />
+  </a>
+  <div class="hd-trust">
+    <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+    Anónimo y confidencial
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <div class="prog-top">
+      <span class="prog-label" id="progLabel">Paso 1 de 5 · 90 seg</span>
+      <button class="btn-back" id="btnBack" onclick="goBack()" disabled>
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        Atrás
+      </button>
+    </div>
+    <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+    <div class="body" id="body"></div>
+  </div>
+</main>
+
+<p class="legal">
+  Mediterránea Firmax SL · CIF B26553248 · Registro Banco de España nº D219 (Ley 5/2019)<br>
+  Análisis informativo, sin coste y sin compromiso. No garantizamos resultados ni cobramos por adelantado.
+  <a href="/privacidad.html" target="_blank" rel="noopener">Privacidad</a> ·
+  <a href="/aviso-legal.html" target="_blank" rel="noopener">Aviso legal</a>
+</p>
+
+<script>
+  // ── Mismas preguntas y mismo contrato de CRM que la home: los leads son comparables ──
+  const STEPS = [
+    {
+      q: '¿Has recibido ya algún papel del banco o del juzgado?',
+      options: [
+        { icon: '⚖️', text: 'Sí, del juzgado (demanda o notificación judicial)' },
+        { icon: '📬', text: 'Sí, del banco (carta de reclamación o aviso)' },
+        { icon: '📅', text: 'No, pero llevo meses sin pagar' },
+        { icon: '💡', text: 'Estoy al día pero ya no puedo más' },
+      ]
+    },
+    {
+      q: '¿Qué resultado necesitas?',
+      options: [
+        { icon: '🏠', text: 'Quedarme en el piso el máximo tiempo posible' },
+        { icon: '✅', text: 'Saldar la deuda sin que quede nada pendiente' },
+        { icon: '💰', text: 'Vender el piso y quedarme con algo de dinero' },
+        { icon: '🧭', text: 'No sé, necesito que alguien me oriente' },
+      ]
+    },
+    {
+      q: '¿Cómo está la relación entre lo que debes y lo que vale el piso?',
+      options: [
+        { icon: '📉', text: 'Debo más de lo que vale el piso actualmente' },
+        { icon: '⚖️', text: 'Debo aproximadamente lo mismo que vale' },
+        { icon: '📈', text: 'El piso vale más de lo que debo' },
+        { icon: '❓', text: 'No tengo idea del valor actual del piso' },
+      ]
+    },
+    {
+      q: '¿Cuál es la situación económica en casa ahora mismo?',
+      options: [
+        { icon: '🚫', text: 'Sin ingresos actualmente' },
+        { icon: '📊', text: 'Ingresos insuficientes para cubrir la hipoteca' },
+        { icon: '💼', text: 'Tenemos ingresos pero la deuda acumulada es demasiado grande' },
+        { icon: '🔄', text: 'La situación mejoró pero nos ahogamos con la deuda anterior' },
+      ]
+    }
+  ];
+
+  const TOTAL = STEPS.length + 1;
+  let step = 0;
+  let answers = [];
+  let capturedName = '';
+
+  const $body  = document.getElementById('body');
+  const $fill  = document.getElementById('progFill');
+  const $label = document.getElementById('progLabel');
+  const $back  = document.getElementById('btnBack');
+
+  function render() {
+    if (step < STEPS.length) {
+      $fill.style.width = (((step + 1) / (TOTAL + 1)) * 100) + '%';
+      $label.textContent = `Paso ${step + 1} de ${TOTAL} · 90 seg`;
+    } else if (step === STEPS.length) {
+      $fill.style.width = '90%';
+      $label.textContent = `Paso ${TOTAL} de ${TOTAL} · Casi listo`;
+    } else {
+      $fill.style.width = '100%';
+      $label.textContent = 'Completado';
+    }
+    $back.disabled = (step === 0 || step > STEPS.length);
+
+    if (step < STEPS.length) renderQuestion();
+    else if (step === STEPS.length) renderContact();
+    else renderConfirm();
+  }
+
+  function transition(fn) {
+    $body.classList.add('out');
+    setTimeout(() => { fn(); $body.classList.remove('out'); }, 200);
+  }
+
+  function renderQuestion() {
+    const s = STEPS[step];
+    $body.innerHTML = `
+      <div class="eyebrow">Pregunta ${step + 1} de ${STEPS.length}</div>
+      <h1 class="q">${s.q}</h1>
+      <div class="opts">
+        ${s.options.map((o, i) => `
+          <button class="opt" onclick="select(${i})">
+            <span class="opt-ico">${o.icon}</span>
+            <span class="opt-txt">${o.text}</span>
+            <svg class="opt-arw" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </button>`).join('')}
+      </div>
+      <div class="foot-note">
+        <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <span><strong>Anónimo hasta el final.</strong> No te pedimos ningún dato personal hasta el paso 5.</span>
+      </div>`;
+  }
+
+  function renderContact() {
+    $body.innerHTML = `
+      <div class="eyebrow">Último paso · 30 segundos</div>
+      <h1 class="q">Casi listo — ¿a dónde te llamamos?</h1>
+      <div class="fields">
+        <div class="frow">
+          <div class="field">
+            <label for="f-nombre">Nombre <span class="req">*</span></label>
+            <input type="text" id="f-nombre" placeholder="Tu nombre" autocomplete="given-name" />
+            <div class="msg" id="m-nombre">Dinos cómo te llamamos.</div>
+          </div>
+          <div class="field">
+            <label for="f-tel">Teléfono <span class="req">*</span></label>
+            <input type="tel" id="f-tel" placeholder="6XX XXX XXX" autocomplete="tel" inputmode="tel" />
+            <div class="msg" id="m-tel">Introduce un teléfono español válido (9 dígitos).</div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req">*</span></label>
+          <input type="email" id="f-email" placeholder="tucorreo@gmail.com" autocomplete="email" inputmode="email" />
+          <div class="msg" id="m-email">Revisa tu dirección de email.</div>
+        </div>
+        <div class="rgpd">
+          <input type="checkbox" id="rgpd" />
+          <label for="rgpd">Acepto la <a href="/privacidad.html" target="_blank" rel="noopener">política de privacidad</a>. Mediterránea Firmax SL tratará mis datos para contactarme sobre mi consulta.</label>
+        </div>
+        <div class="msg" id="m-rgpd" style="margin-top:-6px">Necesitamos tu consentimiento para poder llamarte.</div>
+        <button class="submit" id="btnSubmit" onclick="submitQuiz()">
+          Quiero que me llamen
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+      </div>`;
+  }
+
+  function renderConfirm() {
+    const first = capturedName.split(' ')[0];
+    $body.innerHTML = `
+      <div class="confirm">
+        <div class="confirm-ico">✓</div>
+        <h1>Perfecto${first ? ', ' + first : ''}.</h1>
+        <p>Un especialista del equipo te llama en <span class="hl">menos de 2 minutos</span> para recoger los detalles de tu caso. Si ahora no te viene bien hablar, dínoslo y lo movemos.</p>
+        <div class="rows">
+          <div class="row">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Llamada en menos de 2 minutos
+          </div>
+          <div class="row">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Análisis de tus opciones en 24–48 horas
+          </div>
+          <div class="row">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            Tus datos protegidos · RGPD
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function select(i) {
+    answers[step] = { q: STEPS[step].q, a: STEPS[step].options[i].text };
+    step++;
+    transition(render);
+  }
+
+  function goBack() {
+    if (step > 0 && step <= STEPS.length) { step--; transition(render); }
+  }
+
+  function setErr(field, on) {
+    document.getElementById('f-' + field).classList.toggle('err', on);
+    document.getElementById('m-' + field).classList.toggle('on', on);
+  }
+
+  let submitting = false;
+  function submitQuiz() {
+    if (submitting) return;
+
+    const nombre = document.getElementById('f-nombre').value.trim();
+    const email  = document.getElementById('f-email').value.trim();
+    const rgpd   = document.getElementById('rgpd').checked;
+    const tel    = document.getElementById('f-tel').value.trim().replace(/[\s.\-()]/g, '');
+
+    const okNombre = nombre.length > 0;
+    const okTel    = /^(\+?34)?[6-9]\d{8}$/.test(tel);
+    const okEmail  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    setErr('nombre', !okNombre);
+    setErr('tel', !okTel);
+    setErr('email', !okEmail);
+    document.getElementById('m-rgpd').classList.toggle('on', !rgpd);
+    if (!okNombre || !okTel || !okEmail || !rgpd) return;
+
+    submitting = true;
+    document.getElementById('btnSubmit').disabled = true;
+    capturedName = nombre;
+
+    const telefono = tel.startsWith('+') ? tel : (tel.startsWith('34') ? '+' + tel : '+34' + tel);
+    const params = new URLSearchParams(location.search);
+    const payload = {
+      fuente: 'landing-quiz',
+      nombre, telefono, email, rgpd: true,
+      fase:     (answers[0] || {}).a || '',
+      objetivo: (answers[1] || {}).a || '',
+      respuestas: answers,
+      url: location.href,
+      timestamp: new Date().toISOString(),
+      utm_source:   params.get('utm_source')   || '',
+      utm_medium:   params.get('utm_medium')   || '',
+      utm_campaign: params.get('utm_campaign') || '',
+      utm_content:  params.get('utm_content')  || '',
+    };
+
+    // Captura resiliente: el lead se envía, pero la confirmación se muestra siempre.
+    fetch('https://centrum-crm.lukimporta.es/', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload), keepalive: true
+    }).catch(() => {});
+
+    step++;
+    transition(render);
+  }
+
+  render();
+</script>
+</body>
+</html>
